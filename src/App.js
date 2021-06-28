@@ -14,10 +14,26 @@ const Container = styled.div`
   }
 `;
 
+const Subhead = styled.h3`
+  font-size: 25px;
+  font-weight: 600;
+  margin: 160px 0 48px;
+`;
+const Buttons = styled.a`
+  height: 48px;
+  line-height: 48px;
+  padding: 0 64px;
+  font-weight: 600;
+  color: #000;
+`;
+
 function App() {
   return (
     <div className='App'>
-      <Container>Hello</Container>
+      <Container>
+        <Subhead>Buttons</Subhead>
+        <Subhead>Seach Bar</Subhead>
+      </Container>
     </div>
   );
 }
