@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import styled, { css } from 'styled-components';
-import { colors } from './styles/global.js';
+import styled from 'styled-components';
+import Buttons from './styles/elements.js';
 
 const Container = styled.div`
   width: 1280px;
