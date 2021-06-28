@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { colors } from './styles/global.js';
 
 const Container = styled.div`
   width: 1280px;
@@ -24,7 +25,31 @@ const Buttons = styled.a`
   line-height: 48px;
   padding: 0 64px;
   font-weight: 600;
-  color: #000;
+  border-radius: 100px;
+  color: ${colors.black};
+  background-color: ${colors.white};
+  cursor: pointer;
+  margin: 0 24px;
+  font-size: 14px;
+  text-decoration: none;
+
+  ${(props) =>
+    props.outline &&
+    css`
+      background: transparent;
+      border: 1px solid ${colors.black};
+    `}
+
+  ${(props) =>
+    props.primary &&
+    css`
+      background: ${colors.primary};
+    `}
+      ${(props) =>
+    props.secondary &&
+    css`
+      background: ${colors.secondary};
+    `}
 `;
 
 function App() {
@@ -32,6 +57,12 @@ function App() {
     <div className='App'>
       <Container>
         <Subhead>Buttons</Subhead>
+        <div className='row'>
+          <Buttons>Playlist</Buttons>
+          <Buttons outline>Playlist</Buttons>
+          <Buttons primary>Playlist</Buttons>
+          <Buttons secondary>Playlist</Buttons>
+        </div>
         <Subhead>Seach Bar</Subhead>
       </Container>
     </div>
